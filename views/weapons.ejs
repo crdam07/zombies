@@ -1,0 +1,30 @@
+<% include _header %>
+<h1>SHOW AVAILABLE WEAPONS</h1>
+
+<% weapons.forEach((weapon)=>{ %>
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <a>
+        <label  class="col-form-label">WEAPON: </label>
+            <%= weapon.description %>
+        </a>
+    </div>
+    <div class="row">
+        <label  class="col-md-1 col-form-label">FORCE: </label>
+        <label  class="col-form-label"><%= weapon.force %></label>
+    </div>
+    <div class="row">
+        <label  class="col-md-1 col-form-label">CATEGORY: </label>
+        <label  class="col-form-label"><%= weapon.category %></label>
+    </div>
+    <div class="row">
+        <label  class="col-md-1 col-form-label"> AMMO: </label>
+        <label  class="col-form-label"><%= weapon.ammo %></label>
+    </div>
+    <div class="row">
+            <label  class="col-md-1 col-form-label">________________________________________________</label>
+        </div>
+    </div>
+    <% }) %>
+
+    <% include _footer %>

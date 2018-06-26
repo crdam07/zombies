@@ -1,0 +1,19 @@
+<% include _header%>
+
+<h1>SIGN UP</h1>
+
+<form action = "/signup" method="post">
+    <div class ="form-group">
+        <input name="username" type="text" class="form-control"
+        placeholder="USERNAME" required autofocus/>
+    </div>
+    <div class="form-group">
+        <input name="password" type="password" class="form-control"
+        placeholder="PASSWORD" required/>
+    </div>
+    <input type="submit" value="SIGN UP"
+     class="btn btn-primary btn-block"/>
+    
+</form>
+
+<% include _footer%>

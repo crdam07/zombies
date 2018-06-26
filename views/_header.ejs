@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>ZOMBIE NEST</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="navbar navbar-default navbar-static-top" role = "navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/">ZOMBIE NEST</a>
+    </div>
+        <ul class ="nav navbar-nav navbar-right">
+        <% if (currentZombie){ %>
+        <li>
+            <a href="/edit">
+            Hola, <%= currentZombie.name()%>
+            </a>
+        </li>
+        <li>
+            <a href="/logout">EXIT</a>
+        <li>
+        <% } else {%>  
+        <li>
+            <a href="/login">LOGIN</a>
+        </li>
+        <li>
+            <a href="/signup">SIGN UP</a>
+        </li>
+        <li>
+        <a href="/re-weapons">REGISTER A WEAPON</a>
+        </li>
+        <li>
+        <a href="/weapons">REGISTERED WEAPONS</a>
+        </li>
+        <% } %>
+        </ul>
+    </div>
+</div>
+<div class="container">
+    <% errors.forEach(function(error) { %>
+        <div class="alert alert-danger" role="alert">
+    <%= error %>
+        </div>
+    <% }) %>
+    <% infos.forEach(function(info) { %>
+        <div class= "alert alert-info" role="alert">
+    <%= info %>
+        </div>
+    <% }) %>
+    

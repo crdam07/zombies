@@ -1,0 +1,14 @@
+<% include _header%>
+
+<% if((currentZombie)&&(currentZombie.id === zombie.id)){%>
+    <a href="/edit" class="pull-right">PROFILE EDIT</a>
+<%}%>
+
+<h1><%=zombie.name()%></h1>
+<h2>THE USER <%=zombie.createdAt%> HAS BEEN CREATED</h2>
+
+<%if(zombie.bio){%>
+    <p><%=zombie.bio%></p>
+<%}%>
+
+<% include _footer%>
