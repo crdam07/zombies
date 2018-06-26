@@ -33,8 +33,8 @@ zombieSchema.pre("save",function(done){
         });
     });
 });
-zombieSchema.methods.checkPassword = (guess, done) => {
-    bcrypt.compare(guess,this.password, (err, isMatch)=>{
+zombieSchema.methods.checkPassword = function (guess, done) {
+    bcrypt.compare(guess,this.password, function (err, isMatch){
         done(err,isMatch);
     });
 }

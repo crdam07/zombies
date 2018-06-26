@@ -15,7 +15,7 @@ module.exports = () => {
 };
 
 passport.use("login", new LocalStrategy(function(username, password,done){
-    Zombie.findOne({username: username}, function(err,zombie){
+    Zombie.findOne({username: username}, function(err,Zombie){
         if (err){
             return done(err);
         }

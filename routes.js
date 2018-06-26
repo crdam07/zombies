@@ -62,12 +62,16 @@ router.get("/zombies/:username",(req,res,next)=>{
 });
 router.get("/login",(req,res)=>{
     res.render("login");
-})
+});
 router.post("/login", passport.authenticate("login",{
-    succesRedirect: "/",
+    successRedirect: "/",
     failureRedirect:"/login",
     failureFlash: true
 }));
+router.get("/logout",(req,res)=>{
+    req.logout();
+    res.redirect("/");
+});
 
 router.get("/re-weapons",(req,res)=>{
     res.render("re-weapons");
